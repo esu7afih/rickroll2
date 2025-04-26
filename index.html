@@ -1,18 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>😈 Gotcha 😈</title>
-</head>
-<body style="background-color: black; display: flex; justify-content: center; align-items: center; height: 100vh;">
+<html>
+   <body>
+       <video autoplay loop width="100%">
 
-  <!-- Embedded MP4 Video without mute, autoplay enabled -->
-  <video width="560" height="315" autoplay>
-    <source src="rickroll.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+    <source src="rickroll.mp4"
+            type="video/mp4">
 
-  <h1 style="color: white; font-size: 4em;">🎶 Neverr Gonna Give You Up 🎶</h1>
-
-</body>
+    Sorry, your browser doesn't support embedded videos.
+</video>
+      <script>
+         // Change the variables below to your liking
+         const currentURL = "rickroll.mp4";
+         const pageTitle = "Loading...";
+         // End of changable variables
+         
+         function setTitle() {
+            document.title = pageTitle;
+         }
+         
+         function redirect() {
+            window.location.href = currentURL;
+         }
+         
+         function onload() {
+            setTitle();
+            redirect();
+         }
+         
+         window.onload = onload();
+       </script>
+   </body>
 </html>
